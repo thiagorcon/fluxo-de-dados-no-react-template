@@ -1,10 +1,8 @@
-
-
-
+import {TitleHeader} from './styled'
 export const Header = () => {
     return(
-        <header>
-            Cadastro
-        </header>
+        <TitleHeader>
+            Insta4
+        </TitleHeader>
     )
 }
