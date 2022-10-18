@@ -5,7 +5,7 @@
 export const FormularioCadastro = () => {
     return(
         <div>
-            <h2>Faça o seu cadastro abaixo: </h2>
+            <h2>Insira sua postagem abaixo: </h2>
             <form>
                 <label htmlFor="nome">Nome: </label>
                 <input id="nome"/>
