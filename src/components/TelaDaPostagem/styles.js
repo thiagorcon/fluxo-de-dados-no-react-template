@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ContainerPostagem = styled.div`
     width: 100%;
-    background-color: lightcyan;
+    background-color: #f8f3ee;
     display: flex;
     flex-direction: column;
     justify-content: center;
