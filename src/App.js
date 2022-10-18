@@ -1,8 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { FormularioCadastro } from "./components/FormularioCadastro";
+import  FormularioCadastro  from "./components/FormularioCadastro/FormularioCadastro";
 import { Header } from "./components/Header";
 import TelaDaPostagem from "./components/TelaDaPostagem/TelaDaPostagem";
-
+import { useState } from "react";
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -18,15 +18,27 @@ const Container = styled.div`
 `;
 
 function App() {
+  const [image, setImage] = useState('')
+  const [description, setDescription] = useState('')
+  const [postData, setPostData] = useState({})
+
+  const onChangeImage = (event) => {
+    setImage(event.target.value)
+  }
+
+  const onChangeDescription = (event) => {
+    setDescription(event.target.value)
+  }
   return (
     <>
       <GlobalStyle />
       <Container>
         <aside>
           <Header />
-          <FormularioCadastro />
+          <FormularioCadastro onChangeDescription={onChangeDescription} onChangeImage={onChangeImage} image={image} description={description} setImage={setImage} 
+          setDescription={setDescription}/>
         </aside>
-        <TelaDaPostagem />
+        <TelaDaPostagem image={image} description={description}/>
       </Container>
     </>
   );
