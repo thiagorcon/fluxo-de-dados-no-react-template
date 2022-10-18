@@ -1,7 +1,7 @@
-import { FormContainer, Form, Input, SendButton, StyledLabel } from "./styled";
+import { FormContainer, Form, Input, StyledLabel } from "./styled";
 
 export const FormularioCadastro = () => {
- 
+
   return (
     <FormContainer>
       <h2>Insira sua postagem abaixo: </h2>
@@ -14,7 +14,6 @@ export const FormularioCadastro = () => {
           Descrição:
           <Input id="descricao" />
         </StyledLabel>
-        <SendButton>Enviar</SendButton>
       </Form>
     </FormContainer>
   );
