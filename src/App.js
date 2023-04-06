@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
-import  FormularioCadastro  from "./components/FormularioCadastro/FormularioCadastro";
-import { Header } from "./components/Header";
+import FormularioPostagem from "./components/FormularioPostagem/FormularioPostagem";
 import TelaDaPostagem from "./components/TelaDaPostagem/TelaDaPostagem";
+
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -17,16 +17,16 @@ const Container = styled.div`
 `;
 
 function App() {
-  
   return (
     <>
       <GlobalStyle />
+
       <Container>
-        <aside>
-          <Header />
-          <FormularioCadastro />
-        </aside>
-        <TelaDaPostagem/>
+
+        <FormularioPostagem />
+
+        <TelaDaPostagem />
+
       </Container>
     </>
   );
