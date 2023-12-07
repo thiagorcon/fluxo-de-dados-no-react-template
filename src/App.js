@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import FormularioPostagem from "./components/FormularioPostagem/FormularioPostagem";
 import TelaDaPostagem from "./components/TelaDaPostagem/TelaDaPostagem";
+import { useState } from "react";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -15,19 +16,23 @@ const Container = styled.div`
   height: 100vh;
   width: 100vw;
 `;
-  
-// envio teste
 
 function App() {
+  const [titulo,setTitulo] = useState('')
+  const [descricao,setDescricao] = useState('')
+  const [imagem,setImagem] = useState('')
+  const [imagemAtualizada,setImagemAtualizada] = useState('')
+  
+  console.log('imagem atualizada :', imagemAtualizada);
   return (
     <>
       <GlobalStyle />
 
       <Container>
 
-        <FormularioPostagem />
+        <FormularioPostagem titulo={titulo} descricao={descricao} setTitulo={setTitulo} setDescricao={setDescricao} imagem={imagem} setImagem={setImagem} imagemAtualizada={imagemAtualizada} setImagemAtualizada={setImagemAtualizada}/>
 
-        <TelaDaPostagem />
+        <TelaDaPostagem titulo={titulo} descricao={descricao} setTitulo={setTitulo} setDescricao={setDescricao}  imagemAtualizada={imagemAtualizada}/>
 
       </Container>
     </>
